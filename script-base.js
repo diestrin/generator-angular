@@ -91,9 +91,9 @@ Generator.prototype.addScriptToIndex = function (script) {
     var fullPath = path.join(appPath, 'index.html');
     angularUtils.rewriteFile({
       file: fullPath,
-      needle: '<!-- endbuild -->',
+      needle: '// endbuild',
       splicable: [
-        '<script src="scripts/' + script + '.js"></script>'
+        'script(src="scripts/' + script + '.js")'
       ]
     });
   } catch (e) {

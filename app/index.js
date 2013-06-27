@@ -9,7 +9,7 @@ var Generator = module.exports = function Generator(args, options) {
   yeoman.generators.Base.apply(this, arguments);
   this.argument('appname', { type: String, required: false });
   this.appname = this.appname || path.basename(process.cwd());
-  this.indexFile = this.engine(this.read('../../templates/common/index.html'),
+  this.indexFile = this.engine(this.read('../../templates/common/index.jade'),
       this);
 
   args = ['main'];
@@ -128,19 +128,10 @@ Generator.prototype.askForModules = function askForModules() {
 
 // Waiting a more flexible solution for #138
 Generator.prototype.bootstrapFiles = function bootstrapFiles() {
-  var sass = this.compassBootstrap;
   var files = [];
-  var source = 'styles/' + ( sass ? 'scss/' : 'css/' );
+  var source = 'styles/scss/';
 
-  if (sass) {
-    files.push('main.scss');
-  } else {
-    if (this.bootstrap) {
-      files.push('bootstrap.css');
-    }
-
-    files.push('main.css');
-  }
+  files.push('main.scss');
 
   files.forEach(function (file) {
     this.copy(source + file, 'app/styles/' + file);

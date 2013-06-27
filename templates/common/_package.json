@@ -24,7 +24,12 @@
     "matchdep": "~0.1.2",
     "connect-livereload": "~0.2.0",
     "grunt-google-cdn": "~0.2.0",
-    "grunt-ngmin": "~0.0.2"
+    "grunt-ngmin": "~0.0.2",
+    "grunt-jade": "~0.4.0",
+    "grunt-ngdocs": "~0.1.1",
+    "grunt-angular-templates": "~0.3.8",
+    "grunt-styleguide": "~0.2.6",
+    "send": "~0.1.0"
   },
   "engines": {
     "node": ">=0.8.0"

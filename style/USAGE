@@ -1,0 +1,8 @@
+Description:
+    Creates a new style
+
+Example:
+    yo angular:style thing
+
+    This will create:
+        app/styles/app/views/_thing.sass

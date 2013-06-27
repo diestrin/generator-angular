@@ -21,5 +21,5 @@ function Generator() {
 util.inherits(Generator, yeoman.generators.NamedBase);
 
 Generator.prototype.createViewFiles = function createViewFiles() {
-  this.template('common/view.jade', path.join(this.env.options.appPath, 'views/' + this.name + '.jade'));
+  this.template('common/style.sass', path.join(this.env.options.appPath, 'styles/' + this.appname + '/_' + this.name + '.sass'));
 };
